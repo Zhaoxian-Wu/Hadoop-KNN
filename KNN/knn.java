@@ -47,6 +47,7 @@ public class knn {
 		
 		job.setJarByClass(knn.class);
 		job.setMapperClass(KnnMapper.class);
+		job.setCombinerClass(KnnCombiner.class);
 		job.setReducerClass(KnnReducer.class);
 		
 		job.setMapOutputKeyClass(LongWritable.class);
